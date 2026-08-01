@@ -19,7 +19,22 @@ Channel Surfer is a Python tool that allows you to manage multiple Kismet endpoi
 
 ## Installation
 
-You can install Channel Surfer in several ways:
+### Installer script (recommended)
+
+Clone the repository and run the installer:
+
+```bash
+git clone https://github.com/spectrum-fury/channel_surfer.git
+cd channel_surfer
+./install.sh
+```
+
+The script installs Channel Surfer in an isolated pipx environment, installs
+pipx locally if it is not already available, and adds pipx's launcher directory
+to your shell `PATH`. If your current terminal has not reloaded that change yet,
+the installer prints the exact `export PATH=...` command to run.
+
+You can install Channel Surfer in other ways:
 
 ### Via PyPI
 Install directly using pip:
@@ -34,7 +49,10 @@ For an isolated installation that avoids conflicts with your system Python, use 
 
 ```bash
 pipx install channel-surfer
+pipx ensurepath
 ```
+
+Open a new terminal after `pipx ensurepath` so the updated `PATH` is loaded.
 
 ## Usage
 
